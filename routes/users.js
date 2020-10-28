@@ -13,7 +13,9 @@ router.get('/test', function(req,res,next) {
   res.send('res');
 });
 
-
+router.get('/chat', function(req,res,next){
+  res.render('chat', {'title': 'chat.js'});
+})
 
 module.exports = router;
 //create branch develop
