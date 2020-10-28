@@ -30,7 +30,7 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-io.sockets.on('connection', onListeningSocket(socket));
+io.sockets.on('connection', ()=>onListeningSocket(socket));
 
 /**
  * Normalize a port into a number, string, or false.
@@ -93,5 +93,6 @@ function onListening() {
 }
 
 function onListeningSocket(socket){
+  console.log(socket)
   console.log('connecting socket...')
 }
